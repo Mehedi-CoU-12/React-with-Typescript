@@ -8,7 +8,6 @@ type PersonListType = {
 };
 
 function PersonList(props: PersonListType) {
-    console.log(props);
 
     return (
         <div>
