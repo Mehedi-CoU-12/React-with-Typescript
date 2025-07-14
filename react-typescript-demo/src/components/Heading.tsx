@@ -5,6 +5,8 @@ type HeadingTypes = {
 };
 
 function Heading(props: HeadingTypes) {
+
+
     return (
         <div>
             <h2>{props.children}</h2>

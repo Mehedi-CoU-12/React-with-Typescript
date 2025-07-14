@@ -4,6 +4,7 @@ import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
 import Heading from "./components/Heading";
+import Oscar from "./components/Oscar";
 
 function App() {
     const personName = {
@@ -23,7 +24,7 @@ function App() {
         {
             first: "Rajon",
             last: "bro",
-        }
+        },
     ];
 
     return (
@@ -31,8 +32,11 @@ function App() {
             <Greet name="sumon bro" messageCount={20} />
             <Person name={personName} />
             <PersonList names={personList} />
-            <Status status="success"/>
+            <Status status="success" />
             <Heading>Mehedi</Heading>
+            <Oscar>
+                <Heading>child component within another components</Heading>
+            </Oscar>
         </Fragment>
     );
 }
