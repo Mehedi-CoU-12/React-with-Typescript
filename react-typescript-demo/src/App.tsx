@@ -6,6 +6,8 @@ import Status from "./components/Status";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
 import Button from "./components/Button";
+import Input from "./components/Input";
+import React from "react";
 
 function App() {
     const personName = {
@@ -32,6 +34,10 @@ function App() {
         console.log("first", e,id);
     };
 
+    const handleOnChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
+        console.log('e-->',e)
+    }
+
     return (
         <Fragment>
             <Greet name="sumon bro" messageCount={20} />
@@ -45,6 +51,7 @@ function App() {
             <Button
                 handleClick={handle_click}
             />
+            <Input onHandleChange={handleOnChange} />
         </Fragment>
     );
 }
