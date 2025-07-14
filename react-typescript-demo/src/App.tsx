@@ -5,6 +5,7 @@ import PersonList from "./components/PersonList";
 import Status from "./components/Status";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
+import Button from "./components/Button";
 
 function App() {
     const personName = {
@@ -27,6 +28,10 @@ function App() {
         },
     ];
 
+    const handle_click = (e: React.MouseEvent,id:number) => {
+        console.log("first", e,id);
+    };
+
     return (
         <Fragment>
             <Greet name="sumon bro" messageCount={20} />
@@ -37,6 +42,9 @@ function App() {
             <Oscar>
                 <Heading>child component within another components</Heading>
             </Oscar>
+            <Button
+                handleClick={handle_click}
+            />
         </Fragment>
     );
 }
